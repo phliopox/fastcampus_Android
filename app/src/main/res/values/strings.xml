@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">fastcam</string>
+    <string name="edithint">자연수를 입력해주세요.</string>
+</resources>
