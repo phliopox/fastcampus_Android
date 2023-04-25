@@ -1,4 +1,4 @@
-package com.ian.fastcam.chap1
+package com.ian.fastcam.chap3
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
-import com.ian.fastcam.databinding.ActivityMainBinding
-import com.ian.fastcam.databinding.Chap1Binding
+import com.ian.fastcam.databinding.Chap3Binding
 
 class UnitConversion : Fragment() {
-    private lateinit var binding: Chap1Binding
+    private lateinit var binding: Chap3Binding
     var cmToM = true
 
 
@@ -19,7 +18,7 @@ class UnitConversion : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = Chap1Binding.inflate(layoutInflater)
+        binding = Chap3Binding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -31,12 +30,12 @@ class UnitConversion : Fragment() {
         val outputUnitTextView = binding.outputUnitTextView
         val swapBtn = binding.swapBtn
 
-
+        //화면 전환 발생시 save 해둔 상태 유지하기
         cmToM = savedInstanceState?.getBoolean("cmToM") == true
         binding.inputUnitTextView.text = if (cmToM) "cm" else "m"
         binding.outputUnitTextView.text = if (cmToM) "m" else "cm"
 
-        var inputNumber: Int = 0
+        var inputNumber = 0
         inputText.addTextChangedListener { text ->
             inputNumber = if (text.isNullOrEmpty()) {
                 0
@@ -72,7 +71,10 @@ class UnitConversion : Fragment() {
         super.onSaveInstanceState(outState)
     }
 
-  /*  override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+  /*
+       Activity 에서는 onSaveInstanceState 이후 onRestoreInstanceState 로 꺼낸다~
+
+       override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         cmToM = savedInstanceState.getBoolean("cmToM")
         binding.inputUnitTextView.text = if (cmToM) "cm" else "m"
         binding.outputUnitTextView.text = if (cmToM) "m" else "cm"

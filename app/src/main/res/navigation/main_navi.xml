@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/unitConversion"
-        android:name="com.ian.fastcam.chap1.UnitConversion"
+        android:name="com.ian.fastcam.chap3.UnitConversion"
         android:label="UnitConversion" />
 </navigation>
