@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">fastcam</string>
     <string name="edithint">자연수를 입력해주세요.</string>
+    <string name="fastcampus_class_projects">FastCampus Class Projects</string>
+    <string name="chap3">Chapter 3 : 단위 변환기</string>
+    <string name="chapter_4">Chapter 4 : 응급 의료정보 앱</string>
 </resources>

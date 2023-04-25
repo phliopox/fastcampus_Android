@@ -2,10 +2,25 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_navi"
-    app:startDestination="@id/unitConversion">
+    app:startDestination="@id/chapterSelect">
 
+    <fragment
+        android:id="@+id/chapterSelect"
+        android:name="com.ian.fastcam.ChapterSelect"
+        android:label="ChapterSelect" >
+        <action
+            android:id="@+id/action_chapterSelect_to_unitConversion"
+            app:destination="@id/unitConversion" />
+        <action
+            android:id="@+id/action_chapterSelect_to_emergencyMedical"
+            app:destination="@id/emergencyMedical" />
+    </fragment>
     <fragment
         android:id="@+id/unitConversion"
         android:name="com.ian.fastcam.chap3.UnitConversion"
         android:label="UnitConversion" />
+    <fragment
+        android:id="@+id/emergencyMedical"
+        android:name="com.ian.fastcam.chap4.EmergencyMedical"
+        android:label="EmergencyMedical" />
 </navigation>

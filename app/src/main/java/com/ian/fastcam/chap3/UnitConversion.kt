@@ -18,7 +18,7 @@ class UnitConversion : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = Chap3Binding.inflate(layoutInflater)
+        binding = Chap3Binding.inflate(inflater,container,false)
         return binding.root
     }
 
@@ -71,7 +71,7 @@ class UnitConversion : Fragment() {
         super.onSaveInstanceState(outState)
     }
 
-  /*
+    /*
        Activity 에서는 onSaveInstanceState 이후 onRestoreInstanceState 로 꺼낸다~
 
        override fun onRestoreInstanceState(savedInstanceState: Bundle) {
