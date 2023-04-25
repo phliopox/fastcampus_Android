@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.4"
+        android:hint="@string/edithint"
+        android:textStyle="italic"
+        android:gravity="end"
+        android:inputType="number"
+        android:maxLength="7"
+        />
+    <TextView
+        android:id="@+id/outPutText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/inputText"
+        app:layout_constraintEnd_toEndOf="@id/inputText"
+        app:layout_constraintStart_toStartOf="@id/inputText"
+        android:layout_marginTop="20dp"
+        android:gravity="end"
+        android:text="0"
+        android:textSize="17sp"
+        />
+
+    <TextView
+        android:id="@+id/inputUnitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cm"
+        android:textSize="17sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/inputText"
+        app:layout_constraintBaseline_toBaselineOf="@id/inputText"/>
+
+    <TextView
+        android:id="@+id/outputUnitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m"
+        android:textSize="17sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/outPutText"
+        app:layout_constraintBaseline_toBaselineOf="@id/outPutText"/>
+
+    <ImageButton
+        android:id="@+id/swapBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/inputText"
+        app:layout_constraintBottom_toBottomOf="@id/outPutText"
+        app:layout_constraintStart_toEndOf="@id/inputUnitTextView"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_baseline_swap_vert_24"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
