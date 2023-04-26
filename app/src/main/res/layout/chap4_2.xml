@@ -33,14 +33,13 @@
         android:id="@+id/phone_value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
         android:gravity="center"
         android:hint="010-0000-0000"
         android:inputType="phone"
         android:maxLength="13"
         android:maxLines="1"
         app:layout_constraintBaseline_toBaselineOf="@id/phone_label"
-        app:layout_constraintEnd_toStartOf="@id/phone_image"
+        app:layout_constraintEnd_toStartOf="@id/basic_guide2"
         app:layout_constraintStart_toStartOf="@id/v_guide" />
 
     <EditText
@@ -61,7 +60,7 @@
         android:background="@drawable/ic_baseline_calendar_today_24"
         app:layout_constraintBottom_toBottomOf="@id/birth_value"
         app:layout_constraintEnd_toEndOf="@id/name_value" />
-
+<!--
     <ImageView
         android:id="@+id/phone_image"
         android:layout_width="wrap_content"
@@ -69,7 +68,7 @@
         android:background="@drawable/ic_baseline_local_phone_24"
         app:layout_constraintBottom_toBottomOf="@id/phone_value"
         app:layout_constraintEnd_toEndOf="@id/name_value"
-        app:layout_constraintTop_toTopOf="@id/phone_value" />
+        app:layout_constraintTop_toTopOf="@id/phone_value" />-->
 
     <RadioGroup
         android:id="@+id/blood_Rh_Radio"

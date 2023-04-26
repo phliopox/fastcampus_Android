@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/phone_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_local_phone_24"
+        app:layout_constraintBottom_toBottomOf="@id/phone_value"
+        app:layout_constraintEnd_toEndOf="@id/name_value"
+        app:layout_constraintTop_toTopOf="@id/phone_value" />
 
     <TextView
         android:id="@+id/name_label"
@@ -18,13 +28,12 @@
         style="@style/value_gravity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:text="홍길동"
         app:layout_constraintBaseline_toBaselineOf="@id/name_label"
         app:layout_constraintEnd_toEndOf="@id/basic_guide2"
-        app:layout_constraintStart_toStartOf="@id/v_guide"
-        android:maxLines="1"
-        android:ellipsize="end"
-        />
+        app:layout_constraintStart_toStartOf="@id/v_guide" />
 
     <TextView
         android:id="@+id/birth_label"
@@ -34,6 +43,7 @@
         android:text="@string/birth_label"
         app:layout_constraintStart_toStartOf="@id/name_label"
         app:layout_constraintTop_toBottomOf="@id/name_label" />
+
 
     <TextView
         android:id="@+id/birth_value"
@@ -48,14 +58,12 @@
 
     <TextView
         android:id="@+id/blood_type_label"
+        style="@style/label20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="혈액형"
         app:layout_constraintStart_toStartOf="@id/birth_label"
-        app:layout_constraintTop_toBottomOf="@id/birth_label"
-        style="@style/label20sp"
-        />
-
+        app:layout_constraintTop_toBottomOf="@id/birth_label" />
 
     <TextView
         android:id="@+id/blood_type_value"
@@ -67,76 +75,91 @@
         app:layout_constraintBaseline_toBaselineOf="@id/blood_type_label"
         app:layout_constraintEnd_toStartOf="@+id/basic_guide2"
         app:layout_constraintStart_toStartOf="@id/v_guide" />
+
     <TextView
         android:id="@+id/phone_label"
+        style="@style/label20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/blood_type_label"
-        app:layout_constraintTop_toBottomOf="@id/blood_type_label"
         android:text="비상 연락처"
-        style="@style/label20sp"
-        />
+        app:layout_constraintStart_toStartOf="@id/blood_type_label"
+        app:layout_constraintTop_toBottomOf="@id/blood_type_label" />
+
     <TextView
         android:id="@+id/phone_value"
+        style="@style/value_gravity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:maxLength="13"
+        android:maxLines="1"
         android:text="010-0000-0000"
         app:layout_constraintBaseline_toBaselineOf="@id/phone_label"
-        app:layout_constraintStart_toStartOf="@id/v_guide"
-        app:layout_constraintEnd_toEndOf="@id/basic_guide2"
-        android:maxLines="1"
-        android:maxLength="13"
-        style="@style/value_gravity"
-        />
+        app:layout_constraintEnd_toStartOf="@id/phone_image"
+        app:layout_constraintStart_toStartOf="@id/v_guide" />
 
     <TextView
         android:id="@+id/caution_label"
+        style="@style/label20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="주의사항"
-        app:layout_constraintTop_toBottomOf="@id/phone_label"
         app:layout_constraintStart_toStartOf="@id/phone_label"
-        style="@style/label20sp"
-        />
+        app:layout_constraintTop_toBottomOf="@id/phone_label" />
 
     <TextView
         android:id="@+id/caution_value"
+        style="@style/value_gravity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="고양이털 알레르기"
         app:layout_constraintBaseline_toBaselineOf="@id/caution_label"
-        app:layout_constraintStart_toStartOf="@id/v_guide"
         app:layout_constraintEnd_toEndOf="@id/basic_guide2"
-        style="@style/value_gravity"
-        />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/edit_btn"
+        app:layout_constraintStart_toStartOf="@id/v_guide" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/phone_contact_layer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/basic_guide2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="40dp"
-        android:src="@drawable/ic_baseline_edit_24"
-        />
+        app:constraint_referenced_ids="phone_value,phone_image"
+        tools:ignore="MissingConstraints" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/v_guide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.4"
-        />
+        app:layout_constraintGuide_percent="0.4" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/basic_guide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05"
-        />
+        app:layout_constraintGuide_percent="0.05" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/basic_guide2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95"
-        />
+        app:layout_constraintGuide_percent="0.95" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toTopOf="@id/edit_btn"
+        app:layout_constraintEnd_toEndOf="@id/basic_guide2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/basic_guide2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

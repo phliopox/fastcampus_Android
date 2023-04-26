@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -24,10 +25,17 @@ class EmergencyMedical : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         getPrefInfoAndUpdate()
+
         binding.editBtn.setOnClickListener{
             findNavController().navigate(R.id.action_emergencyMedical_to_editMedicalInfo)
         }
+
+        binding.deleteBtn.setOnClickListener {
+            deleteUserInfo()
+        }
+
     }
     private fun getPrefInfoAndUpdate(){
         val pref = context?.getSharedPreferences(USER_INFO_KEY, Context.MODE_PRIVATE)
@@ -47,5 +55,12 @@ class EmergencyMedical : Fragment() {
                 }
             }
         }
+    }
+
+    private fun deleteUserInfo(){
+        val pref = context?.getSharedPreferences(USER_INFO_KEY, Context.MODE_PRIVATE)
+        pref?.edit()?.clear()?.apply()
+        getPrefInfoAndUpdate()
+        Toast.makeText(context,"초기화를 완료했습니다.",Toast.LENGTH_SHORT).show()
     }
 }
