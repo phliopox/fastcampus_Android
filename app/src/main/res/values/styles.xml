@@ -18,7 +18,7 @@
     <style name="numberKeypad">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
-        <item name="android:textSize">55sp</item>
+        <item name="android:textSize">35sp</item>
         <item name="android:backgroundTint">@color/light_purple</item>
     </style>
     <style name="operatorKeypad" parent="numberKeypad">
