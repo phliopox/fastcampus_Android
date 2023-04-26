@@ -10,5 +10,6 @@
 
 
     <color name="whitey">#f7f7f7</color>
-    <color name="brown">#FFC672</color>
+    <color name="light_grey">#D8D8D8</color>
+
 </resources>

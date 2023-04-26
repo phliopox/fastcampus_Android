@@ -2,11 +2,14 @@
 <resources>
     <style name="label20sp">
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:layout_marginTop">40dp</item>
     </style>
     <style name="editInfo18sp">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="value_gravity" parent="editInfo18sp">
+        <item name="android:gravity">end</item>
     </style>
 </resources>

@@ -22,5 +22,13 @@
     <fragment
         android:id="@+id/emergencyMedical"
         android:name="com.ian.fastcam.chap4.EmergencyMedical"
-        android:label="EmergencyMedical" />
+        android:label="EmergencyMedical" >
+        <action
+            android:id="@+id/action_emergencyMedical_to_editMedicalInfo"
+            app:destination="@id/editMedicalInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/editMedicalInfo"
+        android:name="com.ian.fastcam.chap4.EditMedicalInfo"
+        android:label="UnitConversion" />
 </navigation>
