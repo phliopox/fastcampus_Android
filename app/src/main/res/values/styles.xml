@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--chap4-->
     <style name="label20sp">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">15sp</item>
@@ -11,5 +12,16 @@
     </style>
     <style name="value_gravity" parent="editInfo18sp">
         <item name="android:gravity">end</item>
+    </style>
+
+    <!--chap5-->
+    <style name="numberKeypad">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">55sp</item>
+        <item name="android:backgroundTint">@color/light_purple</item>
+    </style>
+    <style name="operatorKeypad" parent="numberKeypad">
+        <item name="android:backgroundTint">@color/c_purple</item>
     </style>
 </resources>

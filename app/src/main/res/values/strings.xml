@@ -6,6 +6,7 @@
     <string name="chapter_4">Chapter 4 : 응급 의료정보 앱</string>
     <string name="name_label">이름</string>
     <string name="birth_label">생년월일</string>
+    <string name="chapter_5">Chapter 5 : 계산기</string>
 
 
     <string-array name="blood_type_list">

@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_chapterSelect_to_emergencyMedical"
             app:destination="@id/emergencyMedical" />
+        <action
+            android:id="@+id/action_chapterSelect_to_calculator"
+            app:destination="@id/calculator" />
     </fragment>
     <fragment
         android:id="@+id/unitConversion"
@@ -31,4 +34,8 @@
         android:id="@+id/editMedicalInfo"
         android:name="com.ian.fastcam.chap4.EditMedicalInfo"
         android:label="UnitConversion" />
+    <fragment
+        android:id="@+id/calculator"
+        android:name="com.ian.fastcam.chap5.Calculator"
+        android:label="Calculator" />
 </navigation>

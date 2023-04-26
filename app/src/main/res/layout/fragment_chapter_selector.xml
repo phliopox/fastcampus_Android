@@ -33,7 +33,6 @@
             android:text="@string/chap3"
             android:textAllCaps="false"
             />
-
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/chap4_btn"
             android:layout_width="250dp"
@@ -44,6 +43,19 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/background_whitey_radi24"
             android:text="@string/chapter_4"
+            android:textAllCaps="false"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chap5_btn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chap4_btn"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_whitey_radi24"
+            android:text="@string/chapter_5"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="10dp"

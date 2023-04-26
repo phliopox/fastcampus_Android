@@ -28,5 +28,8 @@ class ChapterSelect : Fragment() {
         binding.chap4Btn.setOnClickListener {
             findNavController().navigate(R.id.action_chapterSelect_to_emergencyMedical)
         }
+        binding.chap5Btn.setOnClickListener {
+            findNavController().navigate(R.id.action_chapterSelect_to_calculator)
+        }
     }
 }
