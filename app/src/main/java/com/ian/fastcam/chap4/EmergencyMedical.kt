@@ -1,6 +1,8 @@
 package com.ian.fastcam.chap4
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -36,6 +38,13 @@ class EmergencyMedical : Fragment() {
             deleteUserInfo()
         }
 
+        binding.phoneContactLayer.setOnClickListener {
+            with(Intent(Intent.ACTION_VIEW)) {
+                val phoneNumber = binding.phoneValue.text.toString().replace("-","")
+                data = Uri.parse("tel:$phoneNumber")
+                startActivity(this)
+            }
+        }
     }
     private fun getPrefInfoAndUpdate(){
         val pref = context?.getSharedPreferences(USER_INFO_KEY, Context.MODE_PRIVATE)
