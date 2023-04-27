@@ -7,6 +7,7 @@
     <string name="name_label">이름</string>
     <string name="birth_label">생년월일</string>
     <string name="chapter_5">Chapter 5 : 계산기</string>
+    <string name="chapter_6">Chapter 6 : 스톱워치</string>
 
 
     <string-array name="blood_type_list">
