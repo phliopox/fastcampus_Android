@@ -1,7 +1,6 @@
 package com.ian.fastcam.chap5
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +22,7 @@ constraint layout 의 flow 경우 group 으로 분류되는지, 바로 버튼에
 
 class Calculator : Fragment() {
     private lateinit var binding: Chap5Binding
+    //자주 변경되는 텍스트 -> StringBuilder 를 사용
     private val firstNumberText = StringBuilder("")
     private val secondNumberText = StringBuilder("")
     private val operatorText = StringBuilder("")
@@ -42,7 +42,7 @@ class Calculator : Fragment() {
         val keyPadFlow = binding.KeyPadFlow
         val referencedIds = keyPadFlow.referencedIds
 
-        for (id in referencedIds) {
+        for (id in referencedIds) { // flow referenceIds 를 꺼내 리스너 달아주기
             binding.root.findViewById<Button>(id).setOnClickListener {
                 keyPadClicked(it)
             }
@@ -82,7 +82,7 @@ class Calculator : Fragment() {
                 binding.result.text = result
 
             }
-            //숫자 버튼
+            //숫자 버튼일 경우
             else -> {
                 val numberString = (view as Button).text
                 val numberText = if (operatorText.isEmpty()) firstNumberText else secondNumberText
@@ -91,9 +91,6 @@ class Calculator : Fragment() {
                 updateEquationTextView()
             }
         }
-        Log.d("first",firstNumberText.toString())
-        Log.d("second",secondNumberText.toString())
-        Log.d("operator",operatorText.toString())
     }
 
     private fun operator(operator: String) {
@@ -113,6 +110,7 @@ class Calculator : Fragment() {
         updateEquationTextView()
     }
 
+    //ui 업데이트
     private fun updateEquationTextView() {
         val firstFormattedNumber = if(firstNumberText.isNotEmpty()) decimalFormat.format(firstNumberText.toString().toBigDecimal()) else ""
         val secondFormattedNumber = if(secondNumberText.isNotEmpty()) decimalFormat.format(secondNumberText.toString().toBigDecimal()) else ""
