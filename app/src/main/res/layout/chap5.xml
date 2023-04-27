@@ -1,128 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/equationTv"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="end"
-        android:text="equation"
-        android:textSize="30sp"
-        android:padding="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/result"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="result"
-        android:gravity="end"
-        android:textSize="35sp"
-        android:padding="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/KeyPadFlow"
-        />
-    <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/KeyPadFlow"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:padding="15dp"
-        app:constraint_referenced_ids="btn1, btn2, btn3,btnClear,btn4,
+        <Button
+            android:id="@+id/btn1"
+            style="@style/numberKeypad"
+            android:text="1"
+           />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/numberKeypad"
+            android:text="2"
+            tools:ignore="MissingConstraints"
+            />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/numberKeypad"
+            android:text="3"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/numberKeypad"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/numberKeypad"
+            android:text="5"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/numberKeypad"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/numberKeypad"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/numberKeypad"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/numberKeypad"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btn0"
+            style="@style/numberKeypad"
+            android:text="0"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <Button
+            android:id="@+id/btnEqual"
+            style="@style/operatorKeypad"
+            android:text="="
+            app:layout_constraintHorizontal_weight="3" />
+
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/operatorKeypad"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/operatorKeypad"
+            android:text="+"
+            />
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/operatorKeypad"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/equationTv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="end"
+            android:padding="16dp"
+            android:textSize="30sp"
+            android:textColor="@color/defaultTextColor"
+            app:layout_constraintBottom_toTopOf="@id/result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="16dp"
+            android:textSize="30sp"
+            android:textColor="@color/defaultTextColor"
+            app:layout_constraintBottom_toTopOf="@id/KeyPadFlow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/KeyPadFlow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="15dp"
+            app:constraint_referenced_ids="btn1, btn2, btn3,btnClear,btn4,
         btn5,btn6,btnPlus,btn7,btn8,btn9,btnMinus,btn0,btnEqual"
-        app:flow_horizontalGap="10dp"
-        app:flow_maxElementsWrap="4"
-        app:flow_wrapMode="chain"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1" />
-    <Button
-        android:id="@+id/btn1"
-        style="@style/numberKeypad"
-        android:text="1" />
-
-    <Button
-        android:id="@+id/btn2"
-        style="@style/numberKeypad"
-        android:text="2"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn3"
-        style="@style/numberKeypad"
-        android:text="3"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn4"
-        style="@style/numberKeypad"
-        android:text="4" />
-
-    <Button
-        android:id="@+id/btn5"
-        style="@style/numberKeypad"
-        android:text="5"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btn6"
-        style="@style/numberKeypad"
-        android:text="6" />
-
-    <Button
-        android:id="@+id/btn7"
-        style="@style/numberKeypad"
-        android:text="7" />
-
-    <Button
-        android:id="@+id/btn8"
-        style="@style/numberKeypad"
-        android:text="8" />
-
-    <Button
-        android:id="@+id/btn9"
-        style="@style/numberKeypad"
-        android:text="9" />
-
-    <Button
-        android:id="@+id/btn0"
-        style="@style/numberKeypad"
-        android:text="0"
-        app:layout_constraintHorizontal_weight="1"
-        />
-
-    <Button
-        android:id="@+id/btnEqual"
-        style="@style/operatorKeypad"
-        app:layout_constraintHorizontal_weight="3"
-        android:text="="
-        />
-
-    <Button
-        android:id="@+id/btnClear"
-        style="@style/operatorKeypad"
-        android:text="C" />
-
-    <Button
-        android:id="@+id/btnPlus"
-        style="@style/operatorKeypad"
-        android:text="+" />
-
-    <Button
-        android:id="@+id/btnMinus"
-        style="@style/operatorKeypad"
-        android:text="-" />
+            app:flow_horizontalGap="10dp"
+            app:flow_maxElementsWrap="4"
+            app:flow_wrapMode="chain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1"
+           />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

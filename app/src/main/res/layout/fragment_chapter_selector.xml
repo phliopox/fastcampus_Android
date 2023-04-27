@@ -32,6 +32,7 @@
             android:background="@drawable/background_whitey_radi24"
             android:text="@string/chap3"
             android:textAllCaps="false"
+            android:textColor="@color/black"
             />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/chap4_btn"
@@ -44,6 +45,7 @@
             android:background="@drawable/background_whitey_radi24"
             android:text="@string/chapter_4"
             android:textAllCaps="false"
+            android:textColor="@color/black"
             />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -59,6 +61,7 @@
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
             />
 
 
