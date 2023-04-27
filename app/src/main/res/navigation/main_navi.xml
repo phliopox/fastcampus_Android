@@ -17,6 +17,12 @@
         <action
             android:id="@+id/action_chapterSelect_to_calculator"
             app:destination="@id/calculator" />
+        <action
+            android:id="@+id/action_chapterSelect_to_calculator2"
+            app:destination="@id/calculator" />
+        <action
+            android:id="@+id/action_chapterSelect_to_stopWatch"
+            app:destination="@id/stopWatch" />
     </fragment>
     <fragment
         android:id="@+id/unitConversion"
@@ -38,4 +44,8 @@
         android:id="@+id/calculator"
         android:name="com.ian.fastcam.chap5.Calculator"
         android:label="Calculator" />
+    <fragment
+        android:id="@+id/stopWatch"
+        android:name="com.ian.fastcam.chap6.StopWatch"
+        android:label="StopWatch" />
 </navigation>
