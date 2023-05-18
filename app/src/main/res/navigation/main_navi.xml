@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_chapterSelect_to_stopWatch"
             app:destination="@id/stopWatch" />
+        <action
+            android:id="@+id/action_chapterSelect_to_myGallery"
+            app:destination="@id/myGallery" />
     </fragment>
     <fragment
         android:id="@+id/unitConversion"
@@ -48,4 +51,8 @@
         android:id="@+id/stopWatch"
         android:name="com.ian.fastcam.chap6.StopWatch"
         android:label="StopWatch" />
+    <fragment
+        android:id="@+id/myGallery"
+        android:name="com.ian.fastcam.chap8.MyGallery"
+        android:label="MyGallery" />
 </navigation>

@@ -1,7 +1,6 @@
 package com.ian.fastcam.chap6
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +15,7 @@ class StopWatch : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = Chap6Binding.inflate(inflater, container, false)
         return binding.root
     }

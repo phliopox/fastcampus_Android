@@ -8,6 +8,7 @@
     <string name="birth_label">생년월일</string>
     <string name="chapter_5">Chapter 5 : 계산기</string>
     <string name="chapter_6">Chapter 6 : 스톱워치</string>
+    <string name="chapter_8">Chapter 8 : 나만의 액자(갤러리)</string>
 
 
     <string-array name="blood_type_list">

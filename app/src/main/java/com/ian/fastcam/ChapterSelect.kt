@@ -34,5 +34,8 @@ class ChapterSelect : Fragment() {
         binding.chap6Btn.setOnClickListener{
             findNavController().navigate(R.id.action_chapterSelect_to_stopWatch)
         }
+        binding.chap8Btn.setOnClickListener {
+            findNavController().navigate(R.id.action_chapterSelect_to_myGallery)
+        }
     }
 }
