@@ -37,5 +37,8 @@ class ChapterSelect : Fragment() {
         binding.chap8Btn.setOnClickListener {
             findNavController().navigate(R.id.action_chapterSelect_to_myGallery)
         }
+        binding.chap7Btn.setOnClickListener {
+            findNavController().navigate(R.id.action_chapterSelect_to_vocabulary)
+        }
     }
 }

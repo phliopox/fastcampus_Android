@@ -4,9 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:paddingBottom="50dp"
         >
         <TextView
@@ -14,9 +16,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fastcampus_class_projects"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="50dp"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -26,9 +25,6 @@
             android:id="@+id/chap3_btn"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title"
             android:background="@drawable/background_whitey_radi24"
             android:text="@string/chap3"
             android:textAllCaps="false"
@@ -38,9 +34,6 @@
             android:id="@+id/chap4_btn"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/chap3_btn"
             android:layout_marginTop="15dp"
             android:background="@drawable/background_whitey_radi24"
             android:text="@string/chapter_4"
@@ -52,9 +45,6 @@
             android:id="@+id/chap5_btn"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/chap4_btn"
             android:layout_marginTop="15dp"
             android:background="@drawable/background_whitey_radi24"
             android:text="@string/chapter_5"
@@ -65,9 +55,6 @@
             android:id="@+id/chap6_btn"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/chap5_btn"
             android:layout_marginTop="15dp"
             android:background="@drawable/background_whitey_radi24"
             android:text="@string/chapter_6"
@@ -76,12 +63,22 @@
             android:textColor="@color/black"
             />
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chap7_btn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_whitey_radi24"
+            android:text="@string/chapter_7"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/chap8_btn"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/chap6_btn"
             android:layout_marginTop="15dp"
             android:background="@drawable/background_whitey_radi24"
             android:text="@string/chapter_8"
@@ -91,5 +88,5 @@
             android:textColor="@color/black"
             />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

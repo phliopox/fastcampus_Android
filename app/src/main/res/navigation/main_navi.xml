@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_chapterSelect_to_myGallery"
             app:destination="@id/myGallery" />
+        <action
+            android:id="@+id/action_chapterSelect_to_vocabulary"
+            app:destination="@id/vocabulary" />
     </fragment>
     <fragment
         android:id="@+id/unitConversion"
@@ -55,4 +58,8 @@
         android:id="@+id/myGallery"
         android:name="com.ian.fastcam.chap8.MyGallery"
         android:label="MyGallery" />
+    <fragment
+        android:id="@+id/vocabulary"
+        android:name="com.ian.fastcam.chap7.Vocabulary"
+        android:label="Vocabulary" />
 </navigation>
