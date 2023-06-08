@@ -64,16 +64,18 @@
         android:id="@+id/typeChipGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:selectionRequired="true"
         app:layout_constraintTop_toBottomOf="@id/meanInputLayout"
-        android:layout_marginTop="16dp">
-
-    </com.google.android.material.chip.ChipGroup>
+        android:layout_marginTop="16dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="추가"
         app:layout_constraintTop_toBottomOf="@id/typeChipGroup"
         android:background="@drawable/background_whitey_radi24"
+        android:layout_marginTop="16dp"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

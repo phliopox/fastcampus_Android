@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ian.fastcam.R
 import com.ian.fastcam.TAG
 import com.ian.fastcam.databinding.Chap7Binding
 
@@ -33,10 +35,14 @@ class Vocabulary : Fragment() ,WordAdapter.ItemClickListener{
         super.onViewCreated(view, savedInstanceState)
 
         initRecyclerView()
+
+        binding.addBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_vocabulary_to_vocaAddFragment)
+        }
     }
 
     private fun initRecyclerView() {
-        wordAdapter = WordAdapter(dummyList, this)
+        wordAdapter = WordAdapter(mutableListOf(), this)
         binding.wordRecyclerView.apply {
             adapter = wordAdapter
             layoutManager =
