@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.children
+import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.chip.Chip
 import com.ian.fastcam.chap7.db.AppDatabase
@@ -56,6 +57,18 @@ class VocaAddFragment : Fragment() {
         binding.typeChipGroup.apply {
             types.forEach { text ->
                 addView(createChip(text))
+            }
+        }
+
+        binding.editText.addTextChangedListener {
+            it?.let{ text->
+                binding.textInputLayout.error =
+                when (text.length) {
+                    0 -> "값을 입력해주세요"
+                    1 -> "2자 이상을 입력해주세요"
+                    else -> null
+
+                }
             }
         }
     }
