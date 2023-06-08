@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ian.fastcam.databinding.Chap7ItemWordBinding
 
-class WordAdapter(private val list : MutableList<Word>, private val itemClickListener: ItemClickListener? = null) : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
+class WordAdapter(val list : MutableList<Word>, private val itemClickListener: ItemClickListener? = null) : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
         val binding = Chap7ItemWordBinding.inflate(LayoutInflater.from(parent.context),parent,false)
