@@ -10,14 +10,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import com.ian.fastcam.TAG
 import com.ian.fastcam.databinding.Chap8Binding
 
 class MyGallery : Fragment() {
     private lateinit var binding: Chap8Binding
-
+    private lateinit var imageAdapter: ImageAdapter
     //복수의 권한이 필요한 경우 RequestMultiplePermissions() 후 launch(배열) 로 전달
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
@@ -44,6 +44,7 @@ class MyGallery : Fragment() {
         binding.loadImageBtn.setOnClickListener {
             checkPermission()
         }
+        initRecyclerView()
     }
 
     private fun checkPermission() {
@@ -88,6 +89,21 @@ class MyGallery : Fragment() {
     }
     private fun updateImages(uriList : List<Uri>){
         Log.d(TAG, "MyGallery - updateImages: $uriList");
+        val images = uriList.map{ImageItems.Image(it)}
+        val updatedImage = imageAdapter.currentList.toMutableList().apply { addAll(images) }
+        imageAdapter.submitList(updatedImage)
+    }
+
+    private fun initRecyclerView(){
+        imageAdapter = ImageAdapter(object :ItemClickListener{
+            override fun onLoadMoreClick() {
+                checkPermission()
+            }
+        })
+        binding.imageRecyclerView.apply {
+            adapter = imageAdapter
+            layoutManager = GridLayoutManager(context,2)
+        }
     }
 
 }
