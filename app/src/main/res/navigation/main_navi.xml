@@ -58,7 +58,11 @@
     <fragment
         android:id="@+id/myGallery"
         android:name="com.ian.fastcam.chap8.MyGallery"
-        android:label="MyGallery" />
+        android:label="MyGallery" >
+        <action
+            android:id="@+id/action_myGallery_to_frameFragment"
+            app:destination="@id/frameFragment"/>
+    </fragment>
     <fragment
         android:id="@+id/vocabulary"
         android:name="com.ian.fastcam.chap7.Vocabulary"
@@ -72,4 +76,8 @@
         android:name="com.ian.fastcam.chap7.VocaAddFragment"
         android:label="chap7_add"
         tools:layout="@layout/chap7_add" />
+    <fragment
+        android:id="@+id/frameFragment"
+        android:name="com.ian.fastcam.chap8.FrameFragment"
+        android:label="FrameFragment" />
 </navigation>

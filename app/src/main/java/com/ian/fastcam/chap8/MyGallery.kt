@@ -10,8 +10,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.ian.fastcam.R
 import com.ian.fastcam.TAG
 import com.ian.fastcam.databinding.Chap8Binding
 
@@ -45,6 +48,12 @@ class MyGallery : Fragment() {
             checkPermission()
         }
         initRecyclerView()
+
+        binding.naviFrameFragmentBtn.setOnClickListener {
+            val images = imageAdapter.currentList.filterIsInstance<ImageItems.Image>()
+                .map { it.uri.toString() }.toTypedArray()
+            findNavController().navigate(R.id.action_myGallery_to_frameFragment, bundleOf("images" to images))
+        }
     }
 
     private fun checkPermission() {
