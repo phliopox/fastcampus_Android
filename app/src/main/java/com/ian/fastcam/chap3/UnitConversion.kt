@@ -17,7 +17,7 @@ class UnitConversion : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = Chap3Binding.inflate(inflater,container,false)
         return binding.root
     }
