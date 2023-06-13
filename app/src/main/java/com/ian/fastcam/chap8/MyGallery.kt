@@ -5,13 +5,15 @@ import android.app.AlertDialog
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.os.bundleOf
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.ian.fastcam.R
@@ -38,6 +40,7 @@ class MyGallery : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = Chap8Binding.inflate(inflater, container, false)
+
         return binding.root
     }
 
@@ -54,7 +57,29 @@ class MyGallery : Fragment() {
                 .map { it.uri.toString() }.toTypedArray()
             findNavController().navigate(R.id.action_myGallery_to_frameFragment, bundleOf("images" to images))
         }
+
+    binding.addAction.setOnClickListener {
+        checkPermission()
     }
+    /*    (activity as MenuHost).addMenuProvider(object : MenuProvider{
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.chap8_main_menu,menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                return when(menuItem.itemId){
+                    R.id.action_add->{
+                        checkPermission()
+                        true
+                    }
+                    else -> false
+                }
+
+            }
+
+        },viewLifecycleOwner,Lifecycle.State.RESUMED)*/
+    }
+
 
     private fun checkPermission() {
         when {
