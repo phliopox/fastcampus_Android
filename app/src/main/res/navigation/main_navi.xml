@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_chapterSelect_to_vocabulary"
             app:destination="@id/vocabulary" />
+        <action
+            android:id="@+id/action_chapterSelect_to_musicFragment"
+            app:destination="@id/musicFragment" />
     </fragment>
     <fragment
         android:id="@+id/unitConversion"
@@ -80,4 +83,9 @@
         android:id="@+id/frameFragment"
         android:name="com.ian.fastcam.chap8.FrameFragment"
         android:label="FrameFragment" />
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="com.ian.fastcam.chap9.MusicFragment"
+        android:label="chap9"
+        tools:layout="@layout/chap9" />
 </navigation>

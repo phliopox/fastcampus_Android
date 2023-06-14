@@ -88,5 +88,18 @@
             android:textColor="@color/black"
             />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chap9_btn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_whitey_radi24"
+            android:text="Chpater 9 : 음악재생 앱"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            />
+
     </LinearLayout>
 </ScrollView>

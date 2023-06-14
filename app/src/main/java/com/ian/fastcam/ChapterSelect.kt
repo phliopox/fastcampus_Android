@@ -40,5 +40,8 @@ class ChapterSelect : Fragment() {
         binding.chap7Btn.setOnClickListener {
             findNavController().navigate(R.id.action_chapterSelect_to_vocabulary)
         }
+        binding.chap9Btn.setOnClickListener {
+            findNavController().navigate(R.id.action_chapterSelect_to_musicFragment)
+        }
     }
 }
